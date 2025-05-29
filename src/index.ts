@@ -5,7 +5,6 @@ import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
 import mongoose from 'mongoose'
-import { error } from "console";
 
 const app = express();
 
@@ -34,9 +33,6 @@ mongoose.connection.on('error', (err) => {
 });
 mongoose.connection.on('connected', () => {
     console.log('MongoDB connected successfully');
-});
-mongoose.connection.on('disconnected', () => {
-    console.log('MongoDB disconnected');
 });
 
 
